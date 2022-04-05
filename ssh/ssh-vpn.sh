@@ -373,7 +373,7 @@ netfilter-persistent reload
 # download script
 cd /usr/bin
 wget -O addhost "https://${akbarvpn}/addhost.sh"
-wget -O slhost "https://${akbarvpn}/slhost.sh"
+wget -O newhost "https://${akbarvpn}/newhost.sh"
 wget -O about "https://${akbarvpn}/about.sh"
 wget -O menu "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/menu.sh"
 wget -O trial-menu "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/trial/trial-menu.sh"
@@ -449,7 +449,7 @@ chmod +x sslh-fix
 chmod +x portsshnontls
 chmod +x portsshws
 
-chmod +x slhost
+chmod +x newhost
 chmod +x addhost
 chmod +x menu
 sed -i -e 's/\r$//' menu
