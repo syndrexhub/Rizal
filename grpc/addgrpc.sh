@@ -60,8 +60,8 @@ EOF
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmesslink1="vmess://$(base64 -w 0 /etc/xray/$user-tls.json)"
 vlesslink1="vless://${uuid}@${domain}:${vl}?mode=gun&security=tls&encryption=none&type=grpc&serviceName=GunService&sni=${bug}#$user"
-systemctl restart sl-vmess-grpc.service
-systemctl restart sl-vless-grpc.service
+systemctl restart vmess-grpc.service
+systemctl restart vless-grpc.service
 service cron restart
 clear
 echo -e "══════════════════════" | lolcat
