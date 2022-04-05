@@ -199,8 +199,12 @@ wget -O delgrpc "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/grpc/
 wget -O cekgrpc "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/grpc/cekgrpc.sh"
 wget -O renewgrpc "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/grpc/renewgrpc.sh"
 chmod +x addgrpc
+sed -i -e 's/\r$//' addgrpc
 chmod +x delgrpc
+sed -i -e 's/\r$//' delgrpc
 chmod +x renewgrpc
+sed -i -e 's/\r$//' renewgrpc
 chmod +x cekgrpc
+sed -i -e 's/\r$//' cekgrpc
 
 rm -f grpcku.sh
