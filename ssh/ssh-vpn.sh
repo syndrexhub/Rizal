@@ -188,8 +188,8 @@ echo "/usr/sbin/nologin" >> /etc/shells
 
 cd
 #apt -y install squid3
-wget -O /etc/squid/squid.conf "https://${akbarvpn}/squid3.conf"
-sed -i $MYIP2 /etc/squid/squid.conf
+#wget -O /etc/squid/squid.conf "https://${akbarvpn}/squid3.conf"
+#sed -i $MYIP2 /etc/squid/squid.conf
 
 # Install SSLH
 apt -y install sslh
@@ -375,7 +375,7 @@ cd /usr/bin
 wget -O addhost "https://${akbarvpn}/addhost.sh"
 wget -O newhost "https://${akbarvpn}/newhost.sh"
 wget -O about "https://${akbarvpn}/about.sh"
-wget -O menu "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/menu.sh"
+wget -O menu "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/menu.sh"
 wget -O trial-menu "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/trial/trial-menu.sh"
 wget -O addssh "https://${akbarvpn}/addssh.sh"
 wget -O delssh "https://${akbarvpn}/delssh.sh"
