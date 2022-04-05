@@ -47,22 +47,22 @@ echo "Ketikkan Perintah newhost setelah proses instalasi Script Selesai"
 read -p "Hostname / Domain: " host
 echo "IP="$host >> /var/lib/crot/ipvps.conf
 echo "$host" >> /etc/xray/domain
-#install xray
-wget https://${akbarvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
 #install ssh ovpn
-wget https://${akbarvpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://${akbarvpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://${akbarvpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && sed -i -e 's/\r$//' ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://${akbarvpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && sed -i -e 's/\r$//' set-br.sh && ./set-br.sh
+#install xray
+wget https://${akbarvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && sed -i -e 's/\r$//' ins-xray.sh && screen -S xray ./ins-xray.sh
 # Websocket
-wget https://${akbarvpnnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
+wget https://${akbarvpnnnnnnnnn}/edu.sh && chmod +x edu.sh && sed -i -e 's/\r$//' edu.sh && ./edu.sh
 # Ohp Server
-wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && sed -i -e 's/\r$//' ohp.sh && ./ohp.sh
 # Install Slowdns Server
 # wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/Slowdns/install && chmod +x install && bash install
 # Informasi IP Saya dan Semua Port TCP UDP
 # wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ipsaya.sh && chmod +x ipsaya.sh
 #
 # install xray grpc
-wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/grpc/grpcku.sh && chmod +x grpcku.sh && screen -S grpc ./grpcku.sh
+wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/grpc/grpcku.sh && chmod +x grpcku.sh && sed -i -e 's/\r$//' grcpku.sh && screen -S grpc ./grpcku.sh
 #
 
 rm -f /root/ssh-vpn.sh
