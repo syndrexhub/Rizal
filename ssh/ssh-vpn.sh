@@ -462,6 +462,7 @@ chmod +x trial-vless
 chmod +x trial-trojan
 chmod +x trial-trojango
 chmod +x trial-grpcc
+sed -i -e 's/\r$//' trial-grpcc
 chmod +x addssh
 chmod +x trialssh
 chmod +x delssh
