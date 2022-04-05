@@ -43,7 +43,7 @@ fi
 mkdir /var/lib/crot;
 echo "IP=" >> /var/lib/crot/ipvps.conf
 echo "Masukkan Domain Anda, Jika Anda Tidak Memiliki Domain Klik Enter"
-echo "Ketikkan Perintah addhost setelah proses instalasi Script Selesai"
+echo "Ketikkan Perintah newhost setelah proses instalasi Script Selesai"
 read -p "Hostname / Domain: " host
 echo "IP="$host >> /var/lib/crot/ipvps.conf
 echo "$host" >> /etc/xray/domain
