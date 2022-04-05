@@ -68,23 +68,6 @@ rm -f /root/edu.sh
 rm -f /root/ohp.sh
 rm -f /root/install
 rm -f /root/grpcku.sh
-cat <<EOF> /etc/systemd/system/autosett.service
-[Unit]
-Description=autosetting
-Documentation=nekopoi.care
-
-[Service]
-Type=oneshot
-ExecStart=/bin/bash /etc/set.sh
-RemainAfterExit=yes
-
-[Install]
-WantedBy=multi-user.target
-EOF
-systemctl daemon-reload
-systemctl enable autosett
-wget -O /etc/set.sh "https://${akbarvpn}/set.sh"
-chmod +x /etc/set.sh
 history -c
 echo "1.2" > /home/ver
 echo " "
