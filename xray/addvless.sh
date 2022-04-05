@@ -69,7 +69,7 @@ echo -e "Port No TLS : $nontls"
 echo -e "User ID     : ${uuid}"
 echo -e "Encryption  : none"
 echo -e "Network     : ws"
-echo -e "Bug.        : ${bug}
+echo -e "Bug.        : ${bug}"
 echo -e "Path        : /Ronggolawe"
 echo -e "Created     : $hariini"
 echo -e "Expired     : $exp"
