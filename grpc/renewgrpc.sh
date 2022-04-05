@@ -59,10 +59,10 @@ d2=$(date -d "$now" +%s)
 exp2=$(( (d1 - d2) / 86400 ))
 exp3=$(($exp2 + $masaaktif))
 exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
-sed -i "s/### $user $exp/### $user $exp4/g" /etc/xray/sl-vmessgrpc.json
-sed -i "s/### $user $exp/### $user $exp4/g" /etc/xray/sl-vlessgrpc.json
-systemctl restart sl-vmess-grpc.service
-systemctl restart sl-vless-grpc.service
+sed -i "s/### $user $exp/### $user $exp4/g" /etc/xray/vmessgrpc.json
+sed -i "s/### $user $exp/### $user $exp4/g" /etc/xray/vlessgrpc.json
+systemctl restart vmess-grpc.service
+systemctl restart vless-grpc.service
 service cron restart
 clear
 echo ""
