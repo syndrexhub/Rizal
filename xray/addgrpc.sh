@@ -64,33 +64,33 @@ systemctl restart vmess-grpc.service
 systemctl restart vless-grpc.service
 service cron restart
 clear
-echo -e "══════════════════════" | lolcat
+echo -e "══════════════════════════" | lolcat
 echo -e "=•=•=•=•=•=XRAY GRPC=•=•=•=•=•=" 
-echo -e "══════════════════════" | lolcat
-echo -e "Remarks           : ${user}"
-echo -e "Domain            : ${domain}"
-echo -e "Port VMess        : ${tls}"
-echo -e "Port VLess        : ${vl}"
-echo -e "ID                : ${uuid}"
-echo -e "Alter ID          : 0"
-echo -e "Mode              : Gun"
-echo -e "Security          : TLS"
-echo -e "Type              : grpc"
-echo -e "Service Name      : GunService"
-echo -e "SNI               : ${bug}"
-echo -e "══════════════════════" | lolcat
-echo -e "Link VMess GRPC  : "
-echo -e "=•=•=•=•=•=•=•=•=•=•="
-echo -e "${vmesslink1}"
-echo -e "══════════════════════" | lolcat
-echo -e "Link VLess GRPC  : "
-echo -e "=•=•=•=•=•=•=•=•=•=•="
-echo -e "${vlesslink1}"
-echo -e "══════════════════════" | lolcat
-echo -e "Expired On     : $exp"
-echo -e "══════════════════════" | lolcat
+echo -e "══════════════════════════" | lolcat
+echo -e "Remarks           : ${user}" | lolcat
+echo -e "Domain            : ${domain}" | lolcat
+echo -e "Port VMess        : ${tls}" | lolcat
+echo -e "Port VLess        : ${vl}" | lolcat
+echo -e "ID                : ${uuid}" | lolcat
+echo -e "Alter ID          : 0" | lolcat
+echo -e "Mode              : Gun" | lolcat
+echo -e "Security          : TLS" | lolcat
+echo -e "Type              : grpc" | lolcat
+echo -e "Service Name      : GunService" | lolcat
+echo -e "SNI               : ${bug}" | lolcat
+echo -e "══════════════════════════" | lolcat
+echo -e "Link VMess GRPC  : " | lolcat
+echo -e "=•=•=•=•=•=•=•=•=•=•=" | lolcat
+echo -e ">>> ${vmesslink1}" | lolcat
+echo -e "══════════════════════════" | lolcat
+echo -e "Link VLess GRPC  : " | lolcat
+echo -e "=•=•=•=•=•=•=•=•=•=•=" | lolcat
+echo -e ">>> ${vlesslink1}" | lolcat
+echo -e "══════════════════════════" | lolcat
+echo -e "Expired On     : $exp" | lolcat
+echo -e "══════════════════════════" | lolcat
 echo -e "${RED}AutoScriptSSH By Ronggolawe${NC}"
-echo -e "══════════════════════" | lolcat
+echo -e "══════════════════════════" | lolcat
 echo -e""
 read -p "Ketik Enter Untuk Kembali Ke Menu...."
 sleep 1
