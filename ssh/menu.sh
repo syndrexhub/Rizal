@@ -279,7 +279,7 @@ running
 
 24)
 
-wget https://raw.githubusercontent.com/jagoanneon01/Jagoanneon/main/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/cf.sh && chmod +x cf.sh && ./cf.sh
 
 ;;
 
