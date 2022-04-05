@@ -442,15 +442,21 @@ wget -O running "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/runni
 wget -O sslh-fix "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/sslh/sslh-fix"
 
 chmod +x ipsaya
+sed -i -e 's/\r$//' ipsaya
 chmod +x running
+sed -i -e 's/\r$//' running
 chmod +x sslh-fix
-
+sed -i -e 's/\r$//' sslh-fix
 
 chmod +x portsshnontls
+sed -i -e 's/\r$//' portsshnontls
 chmod +x portsshws
+sed -i -e 's/\r$//' portsshws
 
 chmod +x newhost
+sed -i -e 's/\r$//' newhost
 chmod +x addhost
+sed -i -e 's/\r$//' addhost
 chmod +x menu
 sed -i -e 's/\r$//' menu
 chmod +x trial-menu
@@ -458,67 +464,117 @@ sed -i -e 's/\r$//' trial-menu
 chmod +x trial-ssh
 sed -i -e 's/\r$//' trial-ssh
 chmod +x trial-vmess
+sed -i -e 's/\r$//' trial-vmess
 chmod +x trial-vless
+sed -i -e 's/\r$//' trial-vless
 chmod +x trial-trojan
+sed -i -e 's/\r$//' trial-trojan
 chmod +x trial-trojango
-chmod +x trial-grpcc
-sed -i -e 's/\r$//' trial-grpcc
+sed -i -e 's/\r$//' trial-trojango
+chmod +x trial-grpc
+sed -i -e 's/\r$//' trial-grpc
 chmod +x addssh
+sed -i -e 's/\r$//' addssh
 chmod +x trialssh
+sed -i -e 's/\r$//' trialssh
 chmod +x delssh
+sed -i -e 's/\r$//' delssh
 chmod +x member
+sed -i -e 's/\r$//' member
 chmod +x delexp
+sed -i -e 's/\r$//' delexp
 chmod +x cekssh
+sed -i -e 's/\r$//' cekssh
 chmod +x restart
+sed -i -e 's/\r$//' restart
 chmod +x speedtest
+sed -i -e 's/\r$//' speedtest
 chmod +x info
+sed -i -e 's/\r$//' info
 chmod +x about
+sed -i -e 's/\r$//' about
 chmod +x autokill
+sed -i -e 's/\r$//' autokill
 chmod +x tendang
+sed -i -e 's/\r$//' tendang
 chmod +x ceklim
+sed -i -e 's/\r$//' ceklim
 chmod +x ram
+sed -i -e 's/\r$//' ram
 chmod +x renewssh
+sed -i -e 's/\r$//' renewssh
 chmod +x clearlog
+sed -i -e 's/\r$//' clearlog
 chmod +x changeport
+sed -i -e 's/\r$//' changeport
 chmod +x portovpn
+sed -i -e 's/\r$//' portovpn
 chmod +x porttrojan
+sed -i -e 's/\r$//' porttrojan
 chmod +x portsquid
+sed -i -e 's/\r$//' portsquid
 chmod +x portvlm
+sed -i -e 's/\r$//' portvlm
 chmod +x wbmn
+sed -i -e 's/\r$//' wbmn
 chmod +x xp
+sed -i -e 's/\r$//' xp
 chmod +x tessh
+sed -i -e 's/\r$//' tessh
 chmod +x trj
+sed -i -e 's/\r$//' trj
 chmod +x trjgo
+sed -i -e 's/\r$//' trjgo
 chmod +x wss
+sed -i -e 's/\r$//' wss
 chmod +x vls
+sed -i -e 's/\r$//' vls
 chmod +x grpcc
 sed -i -e 's/\r$//' grpcc
 chmod +x swapkvm
+sed -i -e 's/\r$//' swapkvm
 chmod +x addvmess
+sed -i -e 's/\r$//' addvmess
 chmod +x addvless
+sed -i -e 's/\r$//' addvless
 chmod +x addtrojan
+sed -i -e 's/\r$//' addtrojan
 chmod +x addgrpc
 sed -i -e 's/\r$//' addgrpc
 chmod +x delgrpc
 sed -i -e 's/\r$//' delgrpc
 chmod +x delvmess
+sed -i -e 's/\r$//' delvmess
 chmod +x delvless
+sed -i -e 's/\r$//' delvless
 chmod +x deltrojan
+sed -i -e 's/\r$//' deltrojan
 chmod +x cekgrpc
 sed -i -e 's/\r$//' cekgrpc
 chmod +x cekvmess
+sed -i -e 's/\r$//' cekvmess
 chmod +x cekvless
+sed -i -e 's/\r$//' cekvless
 chmod +x cektrojan
+sed -i -e 's/\r$//' cektrojan
 chmod +x renewgrpc
 sed -i -e 's/\r$//' renewgrpc
 chmod +x renewvmess
+sed -i -e 's/\r$//' renewvmess
 chmod +x renewvless
+sed -i -e 's/\r$//' renewvless
 chmod +x renewtrojan
+sed -i -e 's/\r$//' renewtrojan
 chmod +x certv2ray
+sed -i -e 's/\r$//' certv2ray
 chmod +x addtrgo
+sed -i -e 's/\r$//' addtrgo
 chmod +x deltrgo
+sed -i -e 's/\r$//' deltrgo
 chmod +x renewtrgo
+sed -i -e 's/\r$//' renewtrgo
 chmod +x cektrgo
+sed -i -e 's/\r$//' cektrgo
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 echo "0 1 * * * root delexp" >> /etc/crontab
