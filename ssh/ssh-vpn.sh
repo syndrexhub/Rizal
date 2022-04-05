@@ -491,20 +491,25 @@ chmod +x trjgo
 chmod +x wss
 chmod +x vls
 chmod +x grpcc
+sed -i -e 's/\r$//' grpcc
 chmod +x swapkvm
 chmod +x addvmess
 chmod +x addvless
 chmod +x addtrojan
 chmod +x addgrpc
+sed -i -e 's/\r$//' addgrpc
 chmod +x delgrpc
+sed -i -e 's/\r$//' delgrpc
 chmod +x delvmess
 chmod +x delvless
 chmod +x deltrojan
 chmod +x cekgrpc
+sed -i -e 's/\r$//' cekgrpc
 chmod +x cekvmess
 chmod +x cekvless
 chmod +x cektrojan
 chmod +x renewgrpc
+sed -i -e 's/\r$//' renewgrpc
 chmod +x renewvmess
 chmod +x renewvless
 chmod +x renewtrojan
