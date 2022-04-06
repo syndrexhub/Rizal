@@ -123,14 +123,14 @@ echo -e "  - name: Vmess✓"
 echo -e "    server:${bug}" | lolcat
 echo -e "    port:${nontls}" | lolcat
 echo -e "    uuid:${uuid}" | lolcat
-echo -e "    alterId:0" | lolca
+echo -e "    alterId:0" | lolcat
 echo -e "    chipher:auto" | lolcat
 echo -e "    tls:no" | lolcat
 echo -e "    skip-cert-verify: true" | lolcat
 echo -e "    servername:null
 echo -e "    udp:true" | lolcat
 echo -e "    network:ws" | lolcat
-echo -e "    ws-path:/Ronggolawe
+echo -e "    ws-path:/Ronggolawe" | lolcat
 echo -e "    ws-headers:" | lolcat
 echo -e "      Host: ${domain}" | lolcat
 echo -e "=================================" | lolcat
