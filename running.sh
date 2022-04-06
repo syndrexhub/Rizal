@@ -52,7 +52,6 @@ CITY=$( curl -s ipinfo.io/city )
 #clear
 
 # CHEK STATUS 
-l2tp_status=$(systemctl status xl2tpd | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 openvpn_service="$(systemctl show openvpn.service --no-page)"
 oovpn=$(echo "${openvpn_service}" | grep 'ActiveState=' | cut -f2 -d=)
 #status_openvp=$(/etc/init.d/openvpn status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -69,12 +68,16 @@ tls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3}' | cut 
 nontls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 vless_tls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 vless_nontls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-ssr_status=$(systemctl status ssrmu | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+grpc="$(systemctl show vmessgrpc.service --no-page)"
+vmessgrpc=$(echo "${grpc}" | grep 'ActiveState=' | cut -f2 -d=)
+grpcc="$(systemctl show vlessgrpc.service --no-page)"
+vlessgrpc=$(echo "${grpcc}" | grep 'ActiveState=' | cut -f2 -d=)
+#ssr_status=$(systemctl status ssrmu | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 trojan_server=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 dropbear_status=$(/etc/init.d/dropbear status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 stunnel_service=$(/etc/init.d/stunnel5 status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-sstp_service=$(systemctl status accel-ppp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-squid_service=$(/etc/init.d/squid status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+#sstp_service=$(systemctl status accel-ppp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+#squid_service=$(/etc/init.d/squid status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 ssh_service=$(/etc/init.d/ssh status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 vnstat_service=$(/etc/init.d/vnstat status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 cron_service=$(/etc/init.d/cron status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -111,11 +114,11 @@ else
   status_sst="${RED}  Not Running ${NC}  ( Error )"
 fi
 
-# STATUS SERVICE Shadowsocks HTTP
-if [[ $ssh_status == "running" ]]; then 
-   status_ssh=" ${GREEN}Running ${NC}( No Error )"
+# STATUS SERVICE VMess Grpc
+if [[ $vmessgrpc == "running" ]]; then 
+   status_grpc=" ${GREEN}Running ${NC}( No Error )"
 else
-   status_ssh="${RED}  Not Running ${NC}  ( Error )"
+   status_grpc="${RED}Not Running ${NC}( Error )"
 fi
 
 # STATUS SERVICE OPENVPN
@@ -188,18 +191,11 @@ else
   status_nontls_vless="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
 
-# SHADOWSOCKSR STATUS
-if [[ $ssr_status == "running" ]] ; then
-  status_ssr=" ${GREEN}Running${NC} ( No Error )${NC}"
+# VlessGrpc status
+if [[ $vlessgrpc == "running" ]] ; then
+  status_grpcc=" ${GREEN}Running${NC} ( No Error )${NC}"
 else
-  status_ssr="${RED}  Not Running ${NC}  ( Error )${NC}"
-fi
-
-# SODOSOK
-if [[ $status_text == "active" ]] ; then
-  status_sodosok=" ${GREEN}Running${NC} ( No Error )${NC}"
-else
-  status_sodosok="${RED}  Not Running ${NC}  ( Error )${NC}"
+  status_grpcv="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
 
 # STATUS SERVICE TROJAN
@@ -209,25 +205,11 @@ else
    status_virus_trojan="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
 
-# STATUS SERVICE WIREGUARD
-if [[ $swg == "active" ]]; then
-  status_wg=" ${GREEN}Running ${NC}( No Error )${NC}"
-else
-  status_wg="${RED}  Not Running ${NC}  ( Error )${NC}"
-fi
-
 # Status Service Trojan GO
 if [[ $strgo == "active" ]]; then
   status_trgo=" ${GREEN}Running ${NC}( No Error )${NC}"
 else
   status_trgo="${RED}  Not Running ${NC}  ( Error )${NC}"
-fi
-
-# STATUS SERVICE L2TP
-if [[ $l2tp_status == "running" ]]; then 
-   status_l2tp=" ${GREEN}Running${NC} ( No Error )${NC}"
-else
-   status_l2tp="${RED}  Not Running${NC}  ( Error )${NC}"
 fi
 
 # STATUS SERVICE DROPBEAR
@@ -242,13 +224,6 @@ if [[ $stunnel_service == "running" ]]; then
    status_stunnel=" ${GREEN}Running ${NC}( No Error )"
 else
    status_stunnel="${RED}  Not Running ${NC}  ( Error )}"
-fi
-
-# STATUS SERVICE SSTP
-if [[ $sstp_service == "running" ]]; then 
-   status_sstp=" ${GREEN}Running ${NC}( No Error )"
-else
-   status_sstp="${RED}  Not Running ${NC}  ( Error )"
 fi
 
 # STATUS SERVICE WEBSOCKET TLS
@@ -342,41 +317,43 @@ kernelku=$(uname -r)
 Domen="$(cat /etc/xray/domain)"
 echo -e ""
 echo -e  " ${CYAN}╠════════════════════════════════════════════════════════════╣${NC}"
-echo -e  " ║                     ┃ SYSTEM-SERVICE ┃                     ║" |lolcat
+echo -e  " ║                      ┃ SYSTEM-SERVICE ┃                            ║" |lolcat
 echo -e  " ${CYAN}╠════════════════════════════════════════════════════════════╝${NC}"
-echo -e "║ Hostname    : $HOSTNAME"
-echo -e "║ OS Name     : $Tipe"
+echo -e " ║ Hostname    : $HOSTNAME"
+echo -e " ║ OS Name     : $Tipe"
 #echo -e "Processor   : $tipeprosesor"
 #echo -e "Proc Core   :$totalcore"
 #echo -e "Virtual     :$typevps"
 #echo -e "Cpu Usage   :$cpu_usage"
-echo -e "║ Total RAM   : ${totalram}MB"
-echo -e "║ Public IP   : $MYIP"
-echo -e "║ Domain      : $Domen"
+echo -e " ║ Total RAM   : ${totalram}MB"
+echo -e " ║ Public IP   : $MYIP"
+echo -e " ║ Domain      : $Domen"
 echo -e  " ${cyan}╠════════════════════════════════════════════════════════════╣${NC}"
 echo -e  " ║                     ┃ SERVICE-INFORMATION ┃         ║" |lolcat
 echo -e  " ${cyan}╠════════════════════════════════════════════════════════════╝${NC}"
-echo -e "║ SSH / TUN               :$status_ssh"
-echo -e "║ OpenVPN                 :$status_openvpn"
-echo -e "║ Dropbear                :$status_beruangjatuh"
-echo -e "║ Stunnel5                :$status_stunnel"
-echo -e "║ Squid                   :$status_squid"
-echo -e "║ Fail2Ban                :$status_fail2ban"
-echo -e "║ Crons                   :$status_cron"
-echo -e "║ Vnstat                  :$status_vnstat"
-echo -e "║ XRAYS Vmess TLS         :$status_tls_v2ray"
-echo -e "║ XRAYS Vmess None TLS    :$status_nontls_v2ray"
-echo -e "║ XRAYS Vless TLS         :$status_tls_vless"
-echo -e "║ XRAYS Vless None TLS    :$status_nontls_vless"
-echo -e "║ XRAYS Trojan            :$status_virus_trojan"
-echo -e "║ Trojan GO               :$status_trgo"
-echo -e "║ Websocket TLS           :$swstls"
-echo -e "║ Websocket None TLS      :$swsdrop"
-echo -e "║ Websocket Ovpn          :$swsovpn"
-echo -e "║ OHP Dropbear            :$sohp"
-echo -e "║ OHP OpenVPN             :$sohq"
-echo -e "║ OHP SSH                 :$sohr"
-echo -e "║ SSL / SSH Multiplexer   :$sosslh"
+echo -e " ║ SSH / TUN               :$status_ssh"
+echo -e " ║ OpenVPN                 :$status_openvpn"
+echo -e " ║ Dropbear                :$status_beruangjatuh"
+echo -e " ║ Stunnel5                :$status_stunnel"
+echo -e " ║ Squid                   :Service Squid kami matikan" | lolcat
+echo -e " ║ Fail2Ban                :$status_fail2ban"
+echo -e " ║ Crons                   :$status_cron"
+echo -e " ║ Vnstat                  :$status_vnstat"
+echo -e " ║ XRAYS Vmess TLS         :$status_tls_v2ray"
+echo -e " ║ XRAYS Vmess None TLS    :$status_nontls_v2ray"
+echo -e " ║ XRAYS Vless TLS         :$status_tls_vless"
+echo -e " ║ XRAYS Vless None TLS    :$status_nontls_vless"
+echo -e " ║ XRAYS Trojan            :$status_virus_trojan"
+echo -e " ║ XRAYS VMess Grpc        :$status_grpc"
+echo -e " ║ XRAYS Vless Grpc        :$status_grpcc"
+echo -e " ║ Trojan GO               :$status_trgo"
+echo -e " ║ Websocket TLS           :$swstls"
+echo -e " ║ Websocket None TLS      :$swsdrop"
+echo -e " ║ Websocket Ovpn          :$swsovpn"
+echo -e " ║ OHP Dropbear            :$sohp"
+echo -e " ║ OHP OpenVPN             :$sohq"
+echo -e " ║ OHP SSH                 :$sohr"
+echo -e " ║ SSL / SSH Multiplexer   :$sosslh"
 echo -e  " ${CYAN}╠════════════════════════════════════════════════════════════╣${NC}"
 echo -e  " ║                       ┃ JAGOANNEON VPN ┃                   ║" | lolcat 
 echo -e  " ${CYAN}╠════════════════════════════════════════════════════════════╝${NC}"
