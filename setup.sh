@@ -57,9 +57,9 @@ wget https://${akbarvpnnnnnnnnn}/edu.sh && chmod +x edu.sh && sed -i -e 's/\r$//
 # Ohp Server
 wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && sed -i -e 's/\r$//' ohp.sh && ./ohp.sh
 # Install Slowdns Server
-# wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/Slowdns/install && chmod +x install && bash install
+wget https://raw.githubusercontent.com/jagoanneon01/DNSKU/main/slowdnss/install-sldns && chmod +x install-sldns && bash install-sldns
 # Informasi IP Saya dan Semua Port TCP UDP
-# wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ipsaya.sh && chmod +x ipsaya.sh
+wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ipsaya.sh && chmod +x ipsaya.sh
 #
 # install xray grpc
 wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/grpc/grpcku.sh && chmod +x grpcku.sh && sed -i -e 's/\r$//' grcpku.sh && screen -S grpc ./grpcku.sh
@@ -71,6 +71,8 @@ rm -f /root/set-br.sh
 rm -f /root/edu.sh
 rm -f /root/ohp.sh
 rm -f /root/install
+rm -f /root/install-sldns
+rm -f /root/ipsaya
 rm -f /root/grpcku.sh
 history -c
 echo "1.2" > /home/ver
