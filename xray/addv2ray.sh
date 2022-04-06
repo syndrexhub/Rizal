@@ -90,33 +90,52 @@ systemctl restart xray.service
 service cron restart
 clear
 echo -e ""
-echo -e "════════════════" | lolcat
-echo -e "${RED}====-XRAYS/VMESS-====${NC}"
-echo -e "════════════════" | lolcat
-echo -e "Remarks     : ${user}"
-echo -e "IP/Host     : ${MYIP}"
-echo -e "Address     : ${domain}"
-echo -e "Port TLS    : ${tls}"
-echo -e "Port No TLS : ${nontls}"
-echo -e "User ID     : ${uuid}"
-echo -e "Alter ID    : 0"
-echo -e "Security    : auto"
-echo -e "Network     : ws"
-echo -e "Bug         : ${bug}"
-echo -e "Path        : /Ronggolawe"
-echo -e "Created     : $hariini"
-echo -e "Expired     : $exp"
-echo -e "════════════════" | lolcat
+echo -e "══════════════════════════" | lolcat
+echo -e "${RED}=•=•-xxx VMESS xxx-=•=•${NC}"
+echo -e "══════════════════════════" | lolcat
+echo -e "Remarks     : ${user}" | lolcat
+echo -e "IP/Host     : ${MYIP}" | lolcat
+echo -e "Address     : ${domain}" | lolcat
+echo -e "Port TLS    : ${tls}" | lolcat
+echo -e "Port No TLS : ${nontls}" | lolcat
+echo -e "User ID     : ${uuid}" | lolcat
+echo -e "Alter ID    : 0" | lolcat
+echo -e "Security    : auto" | lolcat
+echo -e "Network     : ws" | lolcat
+echo -e "Bug         : ${bug}" | lolcat
+echo -e "Path        : /Ronggolawe" | lolcat
+echo -e "Created     : $hariini" | lolcat
+echo -e "Expired     : $exp" | lolcat
+echo -e "══════════════════════════" | lolcat
 echo -e "Link TLS    : 
-echo -e ""
-echo -e " ${xrayv2ray1}"
-echo -e "════════════════" | lolcat
+echo -e "═════════════" | lolcat
+echo -e ">>> ${xrayv2ray1}" | lolcat
+echo -e "══════════════════════════" | lolcat
 echo -e "Link Non TLS : 
-echo -e ""
-echo -e " ${xrayv2ray2}"
-echo -e "════════════════" | lolcat
+echo -e "═════════════" | lolcat
+echo -e ">>> ${xrayv2ray2}" | lolcat
+echo -e "══════════════════════════" | lolcat
+echo -e "══════════════════════════" | lolcat
+echo -e "xxxcxxxxx•Config Yaml•xxxxxxxxx" | lolcat
+echo -e "=================================" | lolcat
+echo -e "proxies:" | lolcat
+echo -e "  - name: Vmess✓"
+echo -e "    server:${bug}" | lolcat
+echo -e "    port:${nontls}" | lolcat
+echo -e "    uuid:${uuid}" | lolcat
+echo -e "    alterId:0" | lolca
+echo -e "    chipher:auto" | lolcat
+echo -e "    tls:no" | lolcat
+echo -e "    skip-cert-verify: true" | lolcat
+echo -e "    servername:null
+echo -e "    udp:true" | lolcat
+echo -e "    network:ws" | lolcat
+echo -e "    ws-path:/Ronggolawe
+echo -e "    ws-headers:" | lolcat
+echo -e "      Host: ${domain}" | lolcat
+echo -e "=================================" | lolcat
 echo -e "${RED}AutoScriptSSH By Ronggolawe${NC}"
-echo -e "════════════════" | lolcat
+echo -e "══════════════════════════" | lolcat
 echo -e""
 read -p "Ketik Enter Untuk Kembali Ke Menu...."
 sleep 1
