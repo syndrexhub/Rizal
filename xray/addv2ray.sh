@@ -127,7 +127,7 @@ echo -e "    alterId:0" | lolcat
 echo -e "    chipher:auto" | lolcat
 echo -e "    tls:no" | lolcat
 echo -e "    skip-cert-verify: true" | lolcat
-echo -e "    servername:null
+echo -e "    servername:null" | lolcat
 echo -e "    udp:true" | lolcat
 echo -e "    network:ws" | lolcat
 echo -e "    ws-path:/Ronggolawe" | lolcat
