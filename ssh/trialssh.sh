@@ -31,8 +31,9 @@ else
 domain=$IP2
 fi
 clear
+domain=$(cat /etc/xray/domain)
+cdndomain=$(cat /root/cdndomain)
 dnsdomain=$(cat /root/nsdomain)
-cdndomain=$(cat /root/awscdndomain)
 dnskey=$(cat /etc/slowdns/server.pub)
 IP=$(wget -qO- ipinfo.io/ip);
 ssl="$(cat ~/log-install.txt | grep -w "Stunnel5" | cut -d: -f2)"
@@ -75,7 +76,8 @@ echo -e "═══════════════════════" 
 echo -e "NS (SlowDNS)        : $dnsdomain" | lolcat
 echo -e "DNS PUBLIC KEY      : $dnskey" | lolcat
 echo -e "=============Host=============" | lolcat
-echo -e "Host Domain (CDN)   : $domain" | lolcat
+echo -e "Host Domain (SSH)   : $domain" | lolcat
+echo -e "Host Domain (CDN)   : $cdndomain" | lolcat
 echo -e "Host NS (SlowDNS)   : $dnsdomain" | lolcat
 echo -e "═══════════════════════" | lolcat
 echo -e "SlowDNS             : 2222" | lolcat
@@ -104,11 +106,11 @@ echo -e "SNI SSL/TLS         : ${bug}" | lolcat
 echo -e "═══════════════════════" | lolcat
 echo -e "PAYLOAD WS DB" | lolcat
 echo -e "═══════════════════════" | lolcat
-echo -e "GET / HTTP/1.1[crlf]Host: ${domain}[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]" | lolcat
+echo -e "GET / HTTP/1.1[crlf]Host: ${cdndomain}[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]" | lolcat
 echo -e "═══════════════════════" | lolcat
 echo -e "PAYLOAD WS SSL" | lolcat
 echo -e "═══════════════════════" | lolcat
-echo -e "GET ${domain}://bug.com/ HTTP/1.1[crlf]Host: ${domain}[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]" | lolcat
+echo -e "GET ${cdndomain}://bug.com/ HTTP/1.1[crlf]Host: ${cdndomain}[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]" | lolcat
 echo -e "═══════════════════════" | lolcat
 echo -e "Created             : $hariini" | lolcat
 echo -e "Expired             : $expi" | lolcat
