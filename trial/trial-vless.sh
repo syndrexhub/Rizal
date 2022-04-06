@@ -68,20 +68,20 @@ echo -e "Encryption  : none"
 echo -e "Network     : ws"
 echo -e "Bug.        : ${bug}"
 echo -e "Path        : /Ronggolawe"
-echo -e "════════════════" | lolcat
+echo -e "═══════════════════════" | lolcat
 echo -e "Link TLS    : "
 echo -e ""
 echo -e " ${xrayvless1}"
-echo -e "════════════════" | lolcat
+echo -e "═══════════════════════" | lolcat
 echo -e "Link No TLS : "
 echo -e ""
 echo -e " ${xrayvless2}"
-echo -e "════════════════" | lolcat
+echo -e "═══════════════════════" | lolcat
 echo -e "Created        : $now" | lolcat
 echo -e "Active During To : $ktf Hours" | lolcat
-echo -e "════════════════" | lolcat
+echo -e "═══════════════════════" | lolcat
 echo -e "${red}AutoScriptSSH By Ronggolawe${NC}"
-echo -e "════════════════" | lolcat
+echo -e "═══════════════════════" | lolcat
 echo -e""
 read -p "Ketik Enter Untuk Kembali Ke Menu...."
 sleep 1
