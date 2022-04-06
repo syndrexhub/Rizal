@@ -111,7 +111,7 @@ echo -e "${RED}Link TLS${NC}    : "
 echo -e "═════════════" | lolcat
 echo -e ">>> ${xrayv2ray1}" | lolcat
 echo -e "══════════════════════════" | lolcat
-echo -e "${RED}Link Non TLS${NC} : 
+echo -e "${RED}Link Non TLS${NC} : "
 echo -e "═════════════" | lolcat
 echo -e ">>> ${xrayv2ray2}" | lolcat
 echo -e "══════════════════════════" | lolcat
@@ -133,7 +133,7 @@ echo -e "    network:ws" | lolcat
 echo -e "    ws-path:/Ronggolawe" | lolcat
 echo -e "    ws-headers:" | lolcat
 echo -e "      Host: ${domain}" | lolcat
-echo -e "=================================" | lolcat
+echo -e "══════════════════════════" | lolcat
 echo -e "${RED}AutoScriptSSH By Ronggolawe${NC}"
 echo -e "══════════════════════════" | lolcat
 echo -e""
