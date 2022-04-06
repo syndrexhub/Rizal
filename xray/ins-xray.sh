@@ -397,6 +397,154 @@ systemctl start xray.service
 systemctl enable xray.service
 systemctl restart xray.service
 
+#Buat Config grPc
+
+cat > /etc/xray/vmessgrpc.json << END
+{
+    "log": {
+            "access": "/var/log/xray/access5.log",
+        "error": "/var/log/xray/error.log",
+        "loglevel": "info"
+    },
+    "inbounds": [
+        {
+            "port": 2053,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "${uuid}"
+#vmessgrpc
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "gun",
+                "security": "tls",
+                "tlsSettings": {
+                    "serverName": "${domain}",
+                    "alpn": [
+                        "h2"
+                    ],
+                    "certificates": [
+                        {
+                            "certificateFile": "/etc/xray/xray.crt",
+                            "keyFile": "/etc/xray/xray.key"
+                        }
+                    ]
+                },
+                "grpcSettings": {
+                    "serviceName": "GunService"
+                }
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "tag": "direct"
+        }
+    ]
+}
+END
+
+cat > /etc/xray/vlessgrpc.json << END
+{
+    "log": {
+            "access": "/var/log/xray/access5.log",
+        "error": "/var/log/xray/error.log",
+        "loglevel": "info"
+    },
+    "inbounds": [
+        {
+            "port": 1443,
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "${uuid}"
+#vlessgrpc
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "gun",
+                "security": "tls",
+                "tlsSettings": {
+                    "serverName": "${domain}",
+                    "alpn": [
+                        "h2"
+                    ],
+                    "certificates": [
+                        {
+                            "certificateFile": "/etc/xray/xray.crt",
+                            "keyFile": "/etc/xray/xray.key"
+                        }
+                    ]
+                },
+                "grpcSettings": {
+                    "serviceName": "GunService"
+                }
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "tag": "direct"
+        }
+    ]
+}
+END
+
+cat > /etc/systemd/system/vmess-grpc.service << EOF
+[Unit]
+Description=XRay VMess GRPC Service
+Documentation=https://speedtest.net https://github.com/XTLS/Xray-core
+After=network.target nss-lookup.target
+
+[Service]
+User=root
+NoNewPrivileges=true
+ExecStart=/usr/local/bin/xray -config /etc/xray/vmessgrpc.json
+RestartPreventExitStatus=23
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+cat > /etc/systemd/system/vless-grpc.service << EOF
+[Unit]
+Description=XRay VMess GRPC Service
+Documentation=https://speedtest.net https://github.com/XTLS/Xray-core
+After=network.target nss-lookup.target
+
+[Service]
+User=root
+NoNewPrivileges=true
+ExecStart=/usr/local/bin/xray -config /etc/xray/vlessgrpc.json
+RestartPreventExitStatus=23
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2053 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2053 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 1443 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 1443 -j ACCEPT
+iptables-save > /etc/iptables.up.rules
+iptables-restore -t < /etc/iptables.up.rules
+netfilter-persistent save
+netfilter-persistent reload
+systemctl daemon-reload
+systemctl enable vmess-grpc
+systemctl restart vmess-grpc
+systemctl enable vless-grpc
+systemctl restart vless-grpc
+
 # Install Trojan Go
 latest_version="$(curl -s "https://api.github.com/repos/p4gefau1t/trojan-go/releases" | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
 trojango_link="https://github.com/p4gefau1t/trojan-go/releases/download/v${latest_version}/trojan-go-linux-amd64.zip"
