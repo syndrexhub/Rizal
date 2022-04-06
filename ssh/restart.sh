@@ -1,5 +1,5 @@
 #!/bin/bash
-# SL
+# Jagoanneon
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -25,8 +25,6 @@ systemctl restart ws-nontls
 systemctl restart xray.service
 systemctl restart vless-grpc
 systemctl restart vmess-grpc
-systemctl restart fb-vmess-grpc
-systemctl restart fb-vless-grpc
 systemctl restart ws-ovpn
 systemctl restart ssh-ohp
 systemctl restart dropbear-ohp
