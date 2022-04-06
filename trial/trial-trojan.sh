@@ -65,17 +65,17 @@ echo -e "Address  : ${domain}"
 echo -e "Port     : ${tr}"
 echo -e "Key      : ${user}"
 echo -e "Bug     : ${bug}"
-echo -e "════════════════" | lolcat
+echo -e "════════════════════════" | lolcat
 echo -e "Link TR  : ${trojanlink}" | lolcat
-echo -e "════════════════" | lolcat
+echo -e "═══════════════════════" | lolcat
 echo -e "Link TR IP  : ${trojanlink}" | lolcat
-echo -e "════════════════" | lolcat
-echo -e "════════════════" | lolcat
+echo -e "═══════════════════════" | lolcat
+echo -e "═══════════════════════" | lolcat
 echo -e "Created          : $now" | lolcat
 echo -e "Active During To : $ktf Hours" | lolcat
-echo -e "════════════════" | lolcat
+echo -e "═══════════════════════" | lolcat
 echo -e "${red}AutoScriptSSH By Ronggolawe${NC}"
-echo -e "════════════════" | lolcat
+echo -e "═══════════════════════" | lolcat
 echo -e""
 read -p "Ketik Enter Untuk Kembali Ke Menu...."
 sleep 1
