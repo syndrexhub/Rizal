@@ -80,10 +80,10 @@ echo -e "Port SSH CDN   : 8880" | lolcat
 echo -e "Port CDN TLS   : 443" | lolcat
 echo -e "Port CDN OVPN  : 2086" | lolcat
 echo -e "════════════════════════" | lolcat
-echo -e "OpenVPN        : TCP $ovpn http://$IP:89/client-tcp-$ovpn.ovpn" | lolcat
-echo -e "OpenVPN        : UDP $ovpn2 http://$IP:89/client-udp-$ovpn2.ovpn" | lolcat
-echo -e "OpenVPN        : SSL 990 http://$IP:89/client-tcp-ssl.ovpn" | lolcat
-echo -e "badvpn         : 7100-7300" | lolcat
+echo -e "OpenVPN       : TCP $ovpn http://$IP:89/client-tcp-$ovpn.ovpn" | lolcat
+echo -e "OpenVPN       : UDP $ovpn2 http://$IP:89/client-udp-$ovpn2.ovpn" | lolcat
+echo -e "OpenVPN       : SSL 990 http://$IP:89/client-tcp-ssl.ovpn" | lolcat
+echo -e "badvpn        : 7100-7300" | lolcat
 echo -e "════════════════════════" | lolcat
 echo -e "PAYLOAD WS DB" | lolcat
 echo -e "════════════════════════" | lolcat
@@ -92,7 +92,11 @@ echo -e "═══════════════════════�
 echo -e "PAYLOAD WS SSL" | lolcat
 echo -e "════════════════════════" | lolcat
 echo -e "GET ${domain}://bug.com/ HTTP/1.1[crlf]Host: ${domain}[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]" | lolcat
-echo -e "════════════════════════" | lolcat
+echo -e "═══════════════════════" | lolcat
+echo -e "SET CONFIG HTTP-CUSTOM SLOWDNS" | lolcat
+echo -e "════════════" | lolcat
+echo -e "1.1.1.1:${dnskey}@${Login}:${Pass}@${dnsdomain}" | lolcat
+echo -e "═══════════════════════" | lolcat
 echo -e "Created        : $now" | lolcat
 echo -e "Expired On     : $exp Hours" | lolcat
 echo -e "════════════════════════" | lolcat
