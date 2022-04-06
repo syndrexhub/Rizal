@@ -26,9 +26,8 @@ exit 0
 fi
 clear
 domain=$(cat /etc/xray/domain)
-sldomain=$(cat /root/nsdomain)
-cdndomain=$(cat /root/awscdndomain)
-slkey=$(cat /etc/slowdns/server.pub)
+dnsdomain=$(cat /root/nsdomain)
+dnskey=$(cat /etc/slowdns/server.pub)
 clear
 read -p "Username : " Login
 read -p "Password : " Pass
@@ -67,41 +66,40 @@ echo -e ""
 echo -e "═══════════════════════" | lolcat
 echo -e "Informasi SSH & OpenVPN Premium By $domain"
 echo -e "═══════════════════════" | lolcat
-echo -e "IP/Host             : $IP"
-echo -e "Domain              : $domain"
-echo -e "Username            : $Login"
-echo -e "Password            : $Pass"
+echo -e "IP/Host             : $IP" | lolcat
+echo -e "Domain              : $domain" | lolcat
+echo -e "Username            : $Login" | lolcat
+echo -e "Password            : $Pass" | lolcat
 echo -e "═══════════════════════" | lolcat
-echo -e "NS (SlowDNS)        : $sldomain"
-echo -e "DNS PUBLIC KEY      : $slkey"
+echo -e "NS (SlowDNS)        : $dnsdomain" | lolcat
+echo -e "DNS PUBLIC KEY      : $dnskey" | lolcat
 echo -e "=============Host============="
-echo -e "Host Domain (SSH)   : $domain"
-echo -e "CloudFront(AWS CDN) : $cdndomain"
-echo -e "Host NS (SlowDNS)   : $sldomain"
+echo -e "Host Domain (CDN)   : $domain" | lolcat
+echo -e "Host NS (SlowDNS)   : $dnsdomain" | lolcat
 echo -e "═══════════════════════" | lolcat
-echo -e "SlowDNS             : ALL SSH Port"
-echo -e "OpenSSH             : 22"
-echo -e "Dropbear            : 443, 109, 143"
-echo -e "SSL/TLS             :$ssl"
-echo -e "Proxy Squid         :$sqd"
+echo -e "SlowDNS             : 2222" | lolcat
+echo -e "OpenSSH             : 22" | lolcat
+echo -e "Dropbear            : 443, 109, 143" | lolcat
+echo -e "SSL/TLS             :$ssl" | lolcat
+echo -e "Proxy Squid         :$sqd" | lolcat
 echo -e "═══════════════════════" | lolcat
-echo -e "OHP SSH             : 8181"
-echo -e "OHP Dropbear        : 8282"
-echo -e "OHP OpenVPN         : 8383"
+echo -e "OHP SSH             : 8181" | lolcat
+echo -e "OHP Dropbear        : 8282" | lolcat
+echo -e "OHP OpenVPN         : 8383" | lolcat
 echo -e "═══════════════════════" | lolcat
-echo -e "SSH Websocket SSL   : 443"
-echo -e "SSH Websocket HTTP  : 8880"
+echo -e "SSH Websocket SSL   : 443" | lolcat
+echo -e "SSH Websocket HTTP  : 8880" | lolcat
 echo -e "═══════════════════════" | lolcat
-echo -e "OVPN Websocket      : 2086"
-echo -e "OVPN Port TCP       : $ovpn"
-echo -e "OVPN Port UDP       : $ovpn2"
-echo -e "OVPN Port SSL       : 990"
-echo -e "OVPN TCP            : http://$IP:89/tcp.ovpn"
-echo -e "OVPN UDP            : http://$IP:89/udp.ovpn"
-echo -e "OVPN SSL            : http://$IP:89/ssl.ovpn"
-echo -e "BadVPN UDPGW        : 7100,7200,7300"
+echo -e "OVPN Websocket      : 2086" | lolcat
+echo -e "OVPN Port TCP       : $ovpn" | lolcat
+echo -e "OVPN Port UDP       : $ovpn2" | lolcat
+echo -e "OVPN Port SSL       : 990" | lolcat
+echo -e "OVPN TCP            : http://$IP:89/tcp.ovpn" | lolcat
+echo -e "OVPN UDP            : http://$IP:89/udp.ovpn" | lolcat
+echo -e "OVPN SSL            : http://$IP:89/ssl.ovpn" | lolcat
+echo -e "BadVPN UDPGW        : 7100,7200,7300" | lolcat
 echo -e "═══════════════════════" | lolcat
-echo -e "SNI SSL/TLS         : ${bug}"
+echo -e "SNI SSL/TLS         : ${bug}" | lolcat
 echo -e "═══════════════════════" | lolcat
 echo -e "PAYLOAD WS DB" | lolcat
 echo -e "═══════════════════════" | lolcat
@@ -111,8 +109,8 @@ echo -e "PAYLOAD WS SSL" | lolcat
 echo -e "═══════════════════════" | lolcat
 echo -e "GET ${domain}://bug.com/ HTTP/1.1[crlf]Host: ${domain}[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]" | lolcat
 echo -e "═══════════════════════" | lolcat
-echo -e "Created             : $hariini"
-echo -e "Expired             : $expi"
+echo -e "Created             : $hariini" | lolcat
+echo -e "Expired             : $expi" | lolcat
 echo -e "═══════════════════════" | lolcat
 echo -e "AutoScript By JAGOANNEON" | lolcat
 echo -e "═══════════════════════" | lolcat
