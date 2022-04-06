@@ -13,18 +13,6 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 # ==================================================
-# Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh"
-
-# Link Hosting Kalian Untuk Xray
-akbarvpnn="raw.githubusercontent.com/jagoanneon01/Rizal/main/xray"
-
-# Link Hosting Kalian Untuk Trojan Go
-akbarvpnnn="raw.githubusercontent.com/jagoanneon01/Rizal/main/trojango"
-
-# Link Hosting Kalian Untuk Stunnel5
-akbarvpnnnn="raw.githubusercontent.com/jagoanneon01/Rizal/main/stunnel5"
-
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
 MYIP=$(wget -qO- ipinfo.io/ip);
@@ -450,44 +438,25 @@ chmod +x addhost && sed -i -e 's/\r$//' addhost
 chmod +x menu && sed -i -e 's/\r$//' menu
 chmod +x trial-menu && sed -i -e 's/\r$//' trial-menu
 chmod +x trial-ssh && sed -i -e 's/\r$//' trial-ssh
-chmod +x trial-vmess
-sed -i -e 's/\r$//' trial-vmess
-chmod +x trial-vless
-sed -i -e 's/\r$//' trial-vless
-chmod +x trial-trojan
-sed -i -e 's/\r$//' trial-trojan
-chmod +x trial-trojango
-sed -i -e 's/\r$//' trial-trojango
-chmod +x trial-grpc
-sed -i -e 's/\r$//' trial-grpc
-chmod +x addssh
-sed -i -e 's/\r$//' addssh
-chmod +x trialssh
-sed -i -e 's/\r$//' trialssh
-chmod +x delssh
-sed -i -e 's/\r$//' delssh
-chmod +x member
-sed -i -e 's/\r$//' member
-chmod +x delexp
-sed -i -e 's/\r$//' delexp
-chmod +x cekssh
-sed -i -e 's/\r$//' cekssh
-chmod +x restart
-sed -i -e 's/\r$//' restart
+chmod +x trial-vmess && sed -i -e 's/\r$//' trial-vmess
+chmod +x trial-vless && sed -i -e 's/\r$//' trial-vless
+chmod +x trial-trojan && sed -i -e 's/\r$//' trial-trojan
+chmod +x trial-trojango && sed -i -e 's/\r$//' trial-trojango
+chmod +x trial-grpc && sed -i -e 's/\r$//' trial-grpc
+chmod +x addssh && sed -i -e 's/\r$//' addssh
+chmod +x trialssh && sed -i -e 's/\r$//' trialssh
+chmod +x delssh && sed -i -e 's/\r$//' delssh
+chmod +x member && sed -i -e 's/\r$//' member
+chmod +x delexp && sed -i -e 's/\r$//' delexp
+chmod +x cekssh && sed -i -e 's/\r$//' cekssh
+chmod +x restart && sed -i -e 's/\r$//' restart
 chmod +x speedtest
-sed -i -e 's/\r$//' speedtest
 chmod +x info
-sed -i -e 's/\r$//' info
 chmod +x about
-sed -i -e 's/\r$//' about
-chmod +x autokill
-sed -i -e 's/\r$//' autokill
-chmod +x tendang
-sed -i -e 's/\r$//' tendang
-chmod +x ceklim
-sed -i -e 's/\r$//' ceklim
-chmod +x ram
-sed -i -e 's/\r$//' ram
+chmod +x autokill && sed -i -e 's/\r$//' autokill
+chmod +x tendang && sed -i -e 's/\r$//' tendang
+chmod +x ceklim && sed -i -e 's/\r$//' ceklim
+chmod +x ram && sed -i -e 's/\r$//' ram
 chmod +x renewssh
 sed -i -e 's/\r$//' renewssh
 chmod +x clearlog
@@ -528,40 +497,24 @@ chmod +x addtrojan
 sed -i -e 's/\r$//' addtrojan
 chmod +x addgrpc
 sed -i -e 's/\r$//' addgrpc
-chmod +x delgrpc
-sed -i -e 's/\r$//' delgrpc
-chmod +x delvmess
-sed -i -e 's/\r$//' delvmess
-chmod +x delvless
-sed -i -e 's/\r$//' delvless
-chmod +x deltrojan
-sed -i -e 's/\r$//' deltrojan
-chmod +x cekgrpc
-sed -i -e 's/\r$//' cekgrpc
-chmod +x cekvmess
-sed -i -e 's/\r$//' cekvmess
-chmod +x cekvless
-sed -i -e 's/\r$//' cekvless
-chmod +x cektrojan
-sed -i -e 's/\r$//' cektrojan
-chmod +x renewgrpc
-sed -i -e 's/\r$//' renewgrpc
-chmod +x renewvmess
-sed -i -e 's/\r$//' renewvmess
-chmod +x renewvless
-sed -i -e 's/\r$//' renewvless
-chmod +x renewtrojan
-sed -i -e 's/\r$//' renewtrojan
-chmod +x certv2ray
-sed -i -e 's/\r$//' certv2ray
-chmod +x addtrgo
-sed -i -e 's/\r$//' addtrgo
-chmod +x deltrgo
-sed -i -e 's/\r$//' deltrgo
-chmod +x renewtrgo
-sed -i -e 's/\r$//' renewtrgo
-chmod +x cektrgo
-sed -i -e 's/\r$//' cektrgo
+chmod +x delgrpc && sed -i -e 's/\r$//' delgrpc
+chmod +x delvmess && sed -i -e 's/\r$//' delvmess
+chmod +x delvless && sed -i -e 's/\r$//' delvless
+chmod +x deltrojan && sed -i -e 's/\r$//' deltrojan
+chmod +x cekgrpc && sed -i -e 's/\r$//' cekgrpc
+chmod +x cekvmess && sed -i -e 's/\r$//' cekvmess
+chmod +x cekvless && sed -i -e 's/\r$//' cekvless
+chmod +x cektrojan && sed -i -e 's/\r$//' cektrojan
+chmod +x renewgrpc && sed -i -e 's/\r$//' renewgrpc
+chmod +x renewvmess && sed -i -e 's/\r$//' renewvmess
+chmod +x renewvless && sed -i -e 's/\r$//' renewvless
+chmod +x renewtrojan && sed -i -e 's/\r$//' renewtrojan
+chmod +x certv2ray && sed -i -e 's/\r$//' certv2ray
+chmod +x addtrgo && sed -i -e 's/\r$//' addtrgo
+chmod +x deltrgo && sed -i -e 's/\r$//' deltrgo
+chmod +x renewtrgo && sed -i -e 's/\r$//' renewtrgo
+chmod +x cektrgo && sed -i -e 's/\r$//' cektrgo
+
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 echo "0 1 * * * root delexp" >> /etc/crontab
