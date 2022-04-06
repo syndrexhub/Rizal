@@ -62,7 +62,7 @@ wget https://raw.githubusercontent.com/jagoanneon01/DNSKU/main/slowdnss/install-
 wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ipsaya.sh && chmod +x ipsaya.sh && sed -i -e 's/\r$//' ipsaya.sh && ./ipsaya.sh
 #
 # install xray grpc
-wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/grpc/grpcku.sh && chmod +x grpcku.sh && sed -i -e 's/\r$//' grcpku.sh && screen -S grpc ./grpcku.sh
+wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/grpc/grpcku.sh && chmod +x grpcku.sh && sed -i -e 's/\r$//' grpcku.sh && screen -S grpc ./grpcku.sh
 #
 
 rm -f /root/ssh-vpn.sh
