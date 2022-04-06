@@ -40,8 +40,9 @@ if [ -f "/etc/xray/domain" ]; then
 echo "Script Already Installed"
 exit 0
 fi
+mkdir /etc/xray
 mkdir /var/lib/crot;
-echo "IP=" >> /var/lib/crot/ipvps.conf
+clear
 echo "Masukkan Domain Anda, Jika Anda Tidak Memiliki Domain Klik Enter"
 echo "Ketikkan Perintah newhost setelah proses instalasi Script Selesai"
 read -p "Hostname / Domain: " host
@@ -59,10 +60,10 @@ wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && sed -i -e 's/\r$/
 # Install Slowdns Server
 wget https://raw.githubusercontent.com/jagoanneon01/DNSKU/main/slowdnss/install-sldns && chmod +x install-sldns && sed -i -e 's/\r$//' install-sldns && bash install-sldns
 # Informasi IP Saya dan Semua Port TCP UDP
-wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ipsaya.sh && chmod +x ipsaya.sh && sed -i -e 's/\r$//' ipsaya.sh && ./ipsaya.sh
+#wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ipsaya.sh && chmod +x ipsaya.sh && sed -i -e 's/\r$//' ipsaya.sh && ./ipsaya.sh
 #
 # install xray grpc
-wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/grpc/grpcku.sh && chmod +x grpcku.sh && sed -i -e 's/\r$//' grpcku.sh && screen -S grpc ./grpcku.sh
+#wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/grpc/grpcku.sh && chmod +x grpcku.sh && sed -i -e 's/\r$//' grpcku.sh && screen -S grpc ./grpcku.sh
 #
 
 rm -f /root/ssh-vpn.sh
@@ -72,8 +73,8 @@ rm -f /root/edu.sh
 rm -f /root/ohp.sh
 rm -f /root/install
 rm -f /root/install-sldns
-rm -f /root/ipsaya
-rm -f /root/grpcku.sh
+#rm -f /root/ipsaya
+#rm -f /root/grpcku.sh
 history -c
 echo "1.2" > /home/ver
 echo " "
