@@ -370,68 +370,67 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O addhost "https://${akbarvpn}/addhost.sh"
-wget -O newhost "https://${akbarvpn}/newhost.sh"
-wget -O about "https://${akbarvpn}/about.sh"
+wget -O addhost "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/addhost.sh"
+wget -O newhost "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/newhost.sh"
+wget -O about "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/about.sh"
 wget -O menu "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/menu.sh"
 wget -O trial-menu "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/trial/trial-menu.sh"
-wget -O addssh "https://${akbarvpn}/addssh.sh"
-wget -O delssh "https://${akbarvpn}/delssh.sh"
-wget -O member "https://${akbarvpn}/member.sh"
-wget -O delexp "https://${akbarvpn}/delexp.sh"
-wget -O cekssh "https://${akbarvpn}/cekssh.sh"
+wget -O addssh "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/addssh.sh"
+wget -O delssh "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/delssh.sh"
+wget -O member "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/member.sh"
+wget -O delexp "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/delexp.sh"
+wget -O cekssh "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/cekssh.sh"
 wget -O trial-ssh "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/trial/trial-ssh.sh"
 wget -O trial-vmess "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/trial/trial-vmess.sh"
 wget -O trial-vless "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/trial/trial-vless.sh"
 wget -O trial-trojan "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/trial/trial-trojan.sh"
 wget -O trial-trojango "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/trial/trial-trojango.sh"
 wget -O trial-grpc "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/trial/trial-grpc.sh"
-wget -O restart "https://${akbarvpn}/restart.sh"
-wget -O speedtest "https://${akbarvpn}/speedtest_cli.py"
-wget -O info "https://${akbarvpn}/info.sh"
-wget -O ram "https://${akbarvpn}/ram.sh"
-wget -O renewssh "https://${akbarvpn}/renewssh.sh"
-wget -O autokill "https://${akbarvpn}/autokill.sh"
-wget -O ceklim "https://${akbarvpn}/ceklim.sh"
-wget -O tendang "https://${akbarvpn}/tendang.sh"
-wget -O clearlog "https://${akbarvpn}/clearlog.sh"
-wget -O changeport "https://${akbarvpn}/changeport.sh"
-wget -O portovpn "https://${akbarvpn}/portovpn.sh"
-wget -O portwg "https://${akbarvpn}/portwg.sh"
+wget -O restart "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/info.sh"
+wget -O ram "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/ram.sh"
+wget -O renewssh "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/renewssh.sh"
+wget -O autokill "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/tendang.sh"
+wget -O clearlog "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/clearlog.sh"
+wget -O changeport "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/changeport.sh"
+wget -O portovpn "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/portovpn.sh"
+#wget -O portwg "https://${akbarvpn}/portwg.sh"
 wget -O porttrojan "https://${akbarvpn}/porttrojan.sh"
-wget -O portsstp "https://${akbarvpn}/portsstp.sh"
-wget -O portsquid "https://${akbarvpn}/portsquid.sh"
-wget -O portvlm "https://${akbarvpn}/portvlm.sh"
-wget -O wbmn "https://${akbarvpn}/webmin.sh"
-wget -O xp "https://${akbarvpn}/xp.sh"
+#wget -O portsquid "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/portsquid.sh"
+wget -O portvlm "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/portvlm.sh"
+wget -O wbmn "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/xp.sh"
 wget -O tessh "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/tessh.sh"
 wget -O trj "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/trj.sh"
 wget -O trjgo "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/trjgo.sh"
 wget -O wss "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/wss.sh"
 wget -O vls "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/vls.sh"
 wget -O grpcc "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/grpcc.sh"
-wget -O swapkvm "https://${akbarvpn}/swapkvm.sh"
-wget -O addvmess "https://${akbarvpnn}/addv2ray.sh"
-wget -O addvless "https://${akbarvpnn}/addvless.sh"
-wget -O addtrojan "https://${akbarvpnn}/addtrojan.sh"
+wget -O swapkvm "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/swapkvm.sh"
+wget -O addvmess "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/xray/addv2ray.sh"
+wget -O addvless "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/xray/addvless.sh"
+wget -O addtrojan "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/xray/addtrojan.sh"
 wget -O addgrpc "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/grpc/addgrpc.sh"
 wget -O cekgrpc "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/grpc/cekgrpc.sh"
 wget -O delgrpc "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/grpc/delgrpc.sh"
 wget -O renewgrpc "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/grpc/renewgrpc.sh"
-wget -O delvmess "https://${akbarvpnn}/delv2ray.sh"
-wget -O delvless "https://${akbarvpnn}/delvless.sh"
-wget -O deltrojan "https://${akbarvpnn}/deltrojan.sh"
-wget -O cekvmess "https://${akbarvpnn}/cekv2ray.sh"
-wget -O cekvless "https://${akbarvpnn}/cekvless.sh"
-wget -O cektrojan "https://${akbarvpnn}/cektrojan.sh"
-wget -O renewvmess "https://${akbarvpnn}/renewv2ray.sh"
-wget -O renewvless "https://${akbarvpnn}/renewvless.sh"
-wget -O renewtrojan "https://${akbarvpnn}/renewtrojan.sh"
-wget -O certv2ray "https://${akbarvpnn}/certv2ray.sh"
-wget -O addtrgo "https://${akbarvpnnn}/addtrgo.sh"
-wget -O deltrgo "https://${akbarvpnnn}/deltrgo.sh"
-wget -O renewtrgo "https://${akbarvpnnn}/renewtrgo.sh"
-wget -O cektrgo "https://${akbarvpnnn}/cektrgo.sh"
+wget -O delvmess "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/xray/delv2ray.sh"
+wget -O delvless "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/xray/delvless.sh"
+wget -O deltrojan "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/xray/deltrojan.sh"
+wget -O cekvmess "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/xray/cekv2ray.sh"
+wget -O cekvless "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/xray/cekvless.sh"
+wget -O cektrojan "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/xray/cektrojan.sh"
+wget -O renewvmess "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/xray/renewv2ray.sh"
+wget -O renewvless "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/xray/renewvless.sh"
+wget -O renewtrojan "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/xray/renewtrojan.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/xray/certv2ray.sh"
+wget -O addtrgo "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/trojango/addtrgo.sh"
+wget -O deltrgo "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/trojango/deltrgo.sh"
+wget -O renewtrgo "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/trojango/renewtrgo.sh"
+wget -O cektrgo "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/trojango/cektrgo.sh"
 wget -O portsshnontls "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/websocket/portsshnontls.sh"
 wget -O portsshws "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/websocket/portsshws.sh"
 
@@ -439,28 +438,18 @@ wget -O ipsaya "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ipsaya
 wget -O running "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/running.sh"
 wget -O sslh-fix "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/sslh/sslh-fix"
 
-chmod +x ipsaya
-sed -i -e 's/\r$//' ipsaya
-chmod +x running
-sed -i -e 's/\r$//' running
-chmod +x sslh-fix
-sed -i -e 's/\r$//' sslh-fix
+chmod +x ipsaya && sed -i -e 's/\r$//' ipsaya
+chmod +x running && sed -i -e 's/\r$//' running
+chmod +x sslh-fix && sed -i -e 's/\r$//' sslh-fix
 
-chmod +x portsshnontls
-sed -i -e 's/\r$//' portsshnontls
-chmod +x portsshws
-sed -i -e 's/\r$//' portsshws
+chmod +x portsshnontls && sed -i -e 's/\r$//' portsshnontls
+chmod +x portsshws && sed -i -e 's/\r$//' portsshws
 
-chmod +x newhost
-sed -i -e 's/\r$//' newhost
-chmod +x addhost
-sed -i -e 's/\r$//' addhost
-chmod +x menu
-sed -i -e 's/\r$//' menu
-chmod +x trial-menu
-sed -i -e 's/\r$//' trial-menu
-chmod +x trial-ssh
-sed -i -e 's/\r$//' trial-ssh
+chmod +x newhost && sed -i -e 's/\r$//' newhost
+chmod +x addhost && sed -i -e 's/\r$//' addhost
+chmod +x menu && sed -i -e 's/\r$//' menu
+chmod +x trial-menu && sed -i -e 's/\r$//' trial-menu
+chmod +x trial-ssh && sed -i -e 's/\r$//' trial-ssh
 chmod +x trial-vmess
 sed -i -e 's/\r$//' trial-vmess
 chmod +x trial-vless
