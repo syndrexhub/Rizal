@@ -53,26 +53,42 @@ systemctl restart trojan-go.service
 link="trojan-go://${user}@${bug}:${trgo}/?sni=${domain}&type=ws&host=${domain}&path=/trojango&encryption=none#$user"
 clear
 echo -e ""
-echo -e "════════════════" | lolcat
+echo -e "══════════════════════════" | lolcat
 echo -e "${RED}=====-TROJAN-GO-====${NC}"
-echo -e "════════════════" | lolcat
-echo -e "Remarks    : ${user}"
-echo -e "IP/Host    : ${MYIP}"
-echo -e "Address    : ${domain}"
-echo -e "Port       : ${trgo}"
-echo -e "Key        : ${user}"
-echo -e "Encryption : none"
-echo -e "Bug.       : ${bug}
-echo -e "Path       : /trojango"
-echo -e "Created    : $hariini"
-echo -e "Expired    : $exp"
-echo -e "════════════════" | lolcat
-echo -e "Link Trojan-Go  : 
-echo -e ""
-echo -e " ${link}"
-echo -e "════════════════" | lolcat
+echo -e "══════════════════════════" | lolcat
+echo -e "Remarks    : ${user}" | lolcat
+echo -e "IP/Host    : ${MYIP}" | lolcat
+echo -e "Address    : ${domain}" | lolcat
+echo -e "Port       : ${trgo}" | lolcat
+echo -e "Key        : ${user}" | lolcat
+echo -e "Encryption : none" | lolcat
+echo -e "Bug.       : ${bug}" | lolcat
+echo -e "Path       : /trojango" | lolcat
+echo -e "Created    : $hariini" | lolcat
+echo -e "Expired    : $exp" | lolcat
+echo -e "══════════════════════════" | lolcat
+echo -e "${RED}Link Trojan-Go${NC}  : "
+echo -e "═══════════════" | lolcat
+echo -e " ${link}" | lolcat
+echo -e "=============================" | lolcat
+echo -e "========Config Yaml==========" | lolcat
+echo -e "=============================" | lolcat
+echo -e "proxies:" | lolcat
+echo -e "  - name: TrojanGo"
+echo -e "    server: ${bug}" | lolcat
+echo -e "    port: ${trgo}" | lolcat
+echo -e "    password: ${user}" | lolcat
+echo -e "    network: ws" | lolcat
+echo -e "    sni: ${domain}" | lolcat
+echo -e "    skip-cert-verify: true" | lolcat
+echo -e "    udp: true" | lolcat
+echo -e "    ws-opts:" | lolcat
+echo -e "     path: /trojan-go" | lolcat
+echo -e "     headers:" | lolcat
+echo -e "      Host: ${domain}" | lolcat
+echo -e "══════════════════════════" | lolcat
 echo -e "${RED}AutoScriptSSH By Ronggolawe${NC}"
-echo -e "════════════════" | lolcat
+echo -e "══════════════════════════" | lolcat
 echo -e""
 read -p "Ketik Enter Untuk Kembali Ke Menu...."
 sleep 1
