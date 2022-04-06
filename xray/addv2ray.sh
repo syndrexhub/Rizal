@@ -107,11 +107,11 @@ echo -e "Path        : /Ronggolawe" | lolcat
 echo -e "Created     : $hariini" | lolcat
 echo -e "Expired     : $exp" | lolcat
 echo -e "══════════════════════════" | lolcat
-echo -e "Link TLS    : 
+echo -e "${RED}Link TLS${NC}    : "
 echo -e "═════════════" | lolcat
 echo -e ">>> ${xrayv2ray1}" | lolcat
 echo -e "══════════════════════════" | lolcat
-echo -e "Link Non TLS : 
+echo -e "${RED}Link Non TLS${NC} : 
 echo -e "═════════════" | lolcat
 echo -e ">>> ${xrayv2ray2}" | lolcat
 echo -e "══════════════════════════" | lolcat
@@ -119,7 +119,7 @@ echo -e "═══════════════════════�
 echo -e "xxxcxxxxx•Config Yaml•xxxxxxxxx" | lolcat
 echo -e "=================================" | lolcat
 echo -e "proxies:" | lolcat
-echo -e "  - name: Vmess✓"
+echo -e "  - name: Vmess✓" | lolcat
 echo -e "    server:${bug}" | lolcat
 echo -e "    port:${nontls}" | lolcat
 echo -e "    uuid:${uuid}" | lolcat
