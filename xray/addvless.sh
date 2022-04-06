@@ -58,32 +58,32 @@ systemctl restart xray.service
 service cron restart
 clear
 echo -e ""
-echo -e "════════════════" | lolcat
-echo -e "${RED}====-XRAYS/VLESS-====${NC}"
-echo -e "════════════════" | lolcat
-echo -e "Remarks     : ${user}"
-echo -e "IP/Host     : ${MYIP}"
-echo -e "Address     : ${domain}"
-echo -e "Port TLS    : $tls"
-echo -e "Port No TLS : $nontls"
-echo -e "User ID     : ${uuid}"
-echo -e "Encryption  : none"
-echo -e "Network     : ws"
-echo -e "Bug.        : ${bug}"
-echo -e "Path        : /Ronggolawe"
-echo -e "Created     : $hariini"
-echo -e "Expired     : $exp"
-echo -e "════════════════" | lolcat
-echo -e "Link TLS    : 
-echo -e ""
-echo -e " ${xrayvless1}"
-echo -e "════════════════" | lolcat
-echo -e "Link No TLS : 
-echo -e ""
-echo -e " ${xrayvless2}"
-echo -e "════════════════" | lolcat
+echo -e "══════════════════════════" | lolcat
+echo -e "${RED}=•=•-xxx VLESS xxx-=•=•${NC}"
+echo -e "══════════════════════════" | lolcat
+echo -e "Remarks     : ${user}" | lolcat
+echo -e "IP/Host     : ${MYIP}" | lolcat
+echo -e "Address     : ${domain}" | lolcat
+echo -e "Port TLS    : $tls" | lolcat
+echo -e "Port No TLS : $nontls" | lolcat
+echo -e "User ID     : ${uuid}" | lolcat
+echo -e "Encryption  : none" | lolcat
+echo -e "Network     : ws" | lolcat
+echo -e "Bug.        : ${bug}" | lolcat
+echo -e "Path        : /Ronggolawe" | lolcat
+echo -e "Created     : $hariini" | lolcat
+echo -e "Expired     : $exp" | lolcat
+echo -e "══════════════════════════" | lolcat
+echo -e "${RED}Link TLS${NC}    : "
+echo -e "═════════════" | lolcat
+echo -e ">>> ${xrayvless1}" | lolcat
+echo -e "══════════════════════════" | lolcat
+echo -e "${RED}Link No TLS${NC} : "
+echo -e "═════════════" | lolcat
+echo -e " ${xrayvless2}" | lolcat
+echo -e "══════════════════════════" | lolcat
 echo -e "${RED}AutoScriptSSH By Ronggolawe${NC}"
-echo -e "════════════════" | lolcat
+echo -e "══════════════════════════" | lolcat
 echo -e""
 read -p "Ketik Enter Untuk Kembali Ke Menu...."
 sleep 1
