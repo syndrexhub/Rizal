@@ -73,7 +73,7 @@ echo -e "Password            : $Pass" | lolcat
 echo -e "═══════════════════════" | lolcat
 echo -e "NS (SlowDNS)        : $dnsdomain" | lolcat
 echo -e "DNS PUBLIC KEY      : $dnskey" | lolcat
-echo -e "=============Host============="
+echo -e ">>>x-x-x-x-x-x-Host-x-x-x-x-x-x<<<" | lolcat
 echo -e "Host Domain (CDN)   : $domain" | lolcat
 echo -e "Host NS (SlowDNS)   : $dnsdomain" | lolcat
 echo -e "═══════════════════════" | lolcat
@@ -108,6 +108,10 @@ echo -e "═══════════════════════" 
 echo -e "PAYLOAD WS SSL" | lolcat
 echo -e "═══════════════════════" | lolcat
 echo -e "GET ${domain}://bug.com/ HTTP/1.1[crlf]Host: ${domain}[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]" | lolcat
+echo -e "═══════════════════════" | lolcat
+echo -e "SET CONFIG HTTP-CUSTOM SLOWDNS" | lolcat
+echo -e "════════════" | lolcat
+echo -e "1.1.1.1:${dnskey}@${Login}:${Pass}@${dnsdomain}" | lolcat
 echo -e "═══════════════════════" | lolcat
 echo -e "Created             : $hariini" | lolcat
 echo -e "Expired             : $expi" | lolcat
