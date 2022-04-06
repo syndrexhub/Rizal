@@ -17,7 +17,7 @@ rm -rf menu
 rm updatemenu
 
 cd /usr/bin
-wget -O sslh-fix-reboot "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/sslh-fix/sslh-fix-reboot.sh"
+wget -O sslh-fix-reboot "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/sslh/sslh-fix-reboot.sh"
 wget -O restart "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/restart.sh"
 
 cd /usr/bin
