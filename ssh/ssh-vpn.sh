@@ -358,6 +358,7 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
+
 wget -O addhost "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/addhost.sh"
 wget -O newhost "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/newhost.sh"
 wget -O about "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/about.sh"
@@ -386,7 +387,7 @@ wget -O clearlog "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/
 wget -O changeport "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/changeport.sh"
 wget -O portovpn "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/portovpn.sh"
 #wget -O portwg "https://${akbarvpn}/portwg.sh"
-wget -O porttrojan "https://${akbarvpn}/porttrojan.sh"
+wget -O porttrojan "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/porttrojan.sh"
 #wget -O portsquid "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/portsquid.sh"
 wget -O portvlm "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/portvlm.sh"
 wget -O wbmn "https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/webmin.sh"
@@ -457,46 +458,26 @@ chmod +x autokill && sed -i -e 's/\r$//' autokill
 chmod +x tendang && sed -i -e 's/\r$//' tendang
 chmod +x ceklim && sed -i -e 's/\r$//' ceklim
 chmod +x ram && sed -i -e 's/\r$//' ram
-chmod +x renewssh
-sed -i -e 's/\r$//' renewssh
-chmod +x clearlog
-sed -i -e 's/\r$//' clearlog
-chmod +x changeport
-sed -i -e 's/\r$//' changeport
-chmod +x portovpn
-sed -i -e 's/\r$//' portovpn
-chmod +x porttrojan
-sed -i -e 's/\r$//' porttrojan
-chmod +x portsquid
-sed -i -e 's/\r$//' portsquid
-chmod +x portvlm
-sed -i -e 's/\r$//' portvlm
-chmod +x wbmn
-sed -i -e 's/\r$//' wbmn
-chmod +x xp
-sed -i -e 's/\r$//' xp
-chmod +x tessh
-sed -i -e 's/\r$//' tessh
-chmod +x trj
-sed -i -e 's/\r$//' trj
-chmod +x trjgo
-sed -i -e 's/\r$//' trjgo
-chmod +x wss
-sed -i -e 's/\r$//' wss
-chmod +x vls
-sed -i -e 's/\r$//' vls
-chmod +x grpcc
-sed -i -e 's/\r$//' grpcc
-chmod +x swapkvm
-sed -i -e 's/\r$//' swapkvm
-chmod +x addvmess
-sed -i -e 's/\r$//' addvmess
-chmod +x addvless
-sed -i -e 's/\r$//' addvless
-chmod +x addtrojan
-sed -i -e 's/\r$//' addtrojan
-chmod +x addgrpc
-sed -i -e 's/\r$//' addgrpc
+chmod +x renewssh && sed -i -e 's/\r$//' renewssh
+chmod +x clearlog && sed -i -e 's/\r$//' clearlog
+chmod +x changeport && sed -i -e 's/\r$//' changeport
+chmod +x portovpn && sed -i -e 's/\r$//' portovpn
+chmod +x porttrojan && sed -i -e 's/\r$//' porttrojan
+chmod +x portsquid && sed -i -e 's/\r$//' portsquid
+chmod +x portvlm && sed -i -e 's/\r$//' portvlm
+chmod +x wbmn && sed -i -e 's/\r$//' wbmn
+chmod +x xp && sed -i -e 's/\r$//' xp
+chmod +x tessh && sed -i -e 's/\r$//' tessh
+chmod +x trj && sed -i -e 's/\r$//' trj
+chmod +x trjgo && sed -i -e 's/\r$//' trjgo
+chmod +x wss && sed -i -e 's/\r$//' wss
+chmod +x vls && sed -i -e 's/\r$//' vls
+chmod +x grpcc && sed -i -e 's/\r$//' grpcc
+chmod +x swapkvm && sed -i -e 's/\r$//' swapkvm
+chmod +x addvmess && sed -i -e 's/\r$//' addvmess
+chmod +x addvless && sed -i -e 's/\r$//' addvless
+chmod +x addtrojan && sed -i -e 's/\r$//' addtrojan
+chmod +x addgrpc && sed -i -e 's/\r$//' addgrpc
 chmod +x delgrpc && sed -i -e 's/\r$//' delgrpc
 chmod +x delvmess && sed -i -e 's/\r$//' delvmess
 chmod +x delvless && sed -i -e 's/\r$//' delvless
