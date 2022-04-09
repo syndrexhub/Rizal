@@ -18,17 +18,6 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
-# Link Hosting Kalian Untuk Ssh Vpn
-akbarvpn="raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh"
-# Link Hosting Kalian Untuk Xray
-akbarvpnnnnnn="raw.githubusercontent.com/jagoanneon01/Rizal/main/xray"
-# Link Hosting Kalian Untuk Backup
-akbarvpnnnnnnnn="raw.githubusercontent.com/jagoanneon01/Rizal/main/backup"
-# Link Hosting Kalian Untuk Websocket
-akbarvpnnnnnnnnn="raw.githubusercontent.com/jagoanneon01/Rizal/main/websocket"
-# Link Hosting Kalian Untuk Ohp
-akbarvpnnnnnnnnnn="raw.githubusercontent.com/jagoanneon01/Rizal/main/ohp"
-
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
@@ -49,14 +38,14 @@ read -p "Hostname / Domain: " host
 echo "IP="$host >> /var/lib/crot/ipvps.conf
 echo "$host" >> /etc/xray/domain
 #install ssh ovpn
-wget https://${akbarvpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && sed -i -e 's/\r$//' ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://${akbarvpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && sed -i -e 's/\r$//' set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && sed -i -e 's/\r$//' ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/backup/set-br.sh && chmod +x set-br.sh && sed -i -e 's/\r$//' set-br.sh && ./set-br.sh
 #install xray
 wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/xray/ins-xray.sh && chmod +x ins-xray.sh && sed -i -e 's/\r$//' ins-xray.sh && screen -S xray ./ins-xray.sh
 # Websocket
-wget https://${akbarvpnnnnnnnnn}/edu.sh && chmod +x edu.sh && sed -i -e 's/\r$//' edu.sh && ./edu.sh
+wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/websocket/edu.sh && chmod +x edu.sh && sed -i -e 's/\r$//' edu.sh && ./edu.sh
 # Ohp Server
-wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && sed -i -e 's/\r$//' ohp.sh && ./ohp.sh
+wget https://raw.githubusercontent.com/jagoanneon01/Rizal/main/ohp/ohp.sh && chmod +x ohp.sh && sed -i -e 's/\r$//' ohp.sh && ./ohp.sh
 # Install Slowdns Server
 wget https://raw.githubusercontent.com/jagoanneon01/DNSKU/main/slowdnss/install-sldns && chmod +x install-sldns && sed -i -e 's/\r$//' install-sldns && bash install-sldns
 # Informasi IP Saya dan Semua Port TCP UDP
